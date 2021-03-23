@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 //import './InputArea.css';
 
-function InputArea({ addItem, updateInput, todo }) {
+function InputArea({ addItem, setTextInput, todos }) {
+  
+const updateInput = (i) => {
+  setTextInput(i.target.value);
+  
+
+}
+
+ const handleSubmit = (e) => {
+   e.preventDefault();
+   setTodos([
+     ...prev,
+     {text: updateInput}
+   ])
+
+ }
+  
   return (
-    <form className="todo-form" onSubmit={(e) => addItem(e, todo)}>
+    <form className="todo-form" onSubmit={(e) => addItem(e, todos)}>
       <label htmlFor="todo">Here:</label>
       <input
         id="todo"
@@ -11,7 +28,7 @@ function InputArea({ addItem, updateInput, todo }) {
         onChange={updateInput}
         required
         type="text"
-        value={todo}
+        value={todos}
       />
       <button type="submit">ADD TO</button>
     </form>
