@@ -2,7 +2,7 @@ import React from 'react';
 
 //css
 import './Todos.css';
-const Todo = ({text, i, todos, setTodos, key }) => {
+const Todo = ({text, i, todos, setTodos, }) => {
     
    
     const doneHandler = () => {
@@ -25,8 +25,8 @@ const Todo = ({text, i, todos, setTodos, key }) => {
     return (
         <div className="item" >
             <div className={`container ${i.completed ? "completed" : ''}`} >{text} </div>
-            <button onClick={doneHandler} >done</button>
-            <button onClick={deleteHandler}>delete</button>
+            <button className="btn-done" onClick={doneHandler} >done</button>
+            <button className="btn-del" onClick={deleteHandler}>delete</button>
             
              </div>
 
