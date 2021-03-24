@@ -6,6 +6,10 @@ function TodoList({ todos, setTodos }) {
     return (
         <>
         <ul className="TodoList">
+
+          {todos.map((todo, index) => (
+            <Todos text={todo.text} key={index} />
+
           <h1>Todo List</h1>
           {todos.map((i, index) => (
             <Todo 
@@ -15,6 +19,7 @@ function TodoList({ todos, setTodos }) {
             key={i.id} 
             i={i} 
             />
+
           ))}
         </ul>
         </>
