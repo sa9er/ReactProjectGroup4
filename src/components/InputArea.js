@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-//import './InputArea.css';
+import './InputArea.css';
 
 function InputArea({ setTextInput, todos, setTodos, textInput }) {
   
@@ -23,7 +23,6 @@ const updateInput = (i) => {
 
   return (
     <form className="todo-form" >
-      <label>Here:</label>
       <input
         id="todo"
         name="todo"
@@ -31,8 +30,9 @@ const updateInput = (i) => {
         required
         type="text"
         value={textInput}
+        placeholder="what's next?!"
       />
-      <button onClick={handleSubmit} type="submit">ADD TO</button>
+      <button className="bttn" onClick={handleSubmit} type="submit">ADD TO</button>
     </form>
   );
 }

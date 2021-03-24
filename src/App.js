@@ -11,7 +11,7 @@ function App() {
   const [todos, setTodos] = useState([]);
   return (
     <div className="App">
-      <h1> </h1>
+      <header><h1>Group 4 are awesome! </h1> </header>
       <InputArea textInput={textInput} setTextInput={setTextInput} todos={todos} setTodos={setTodos} />
       <TodoList todos={todos} setTodos={setTodos} />
       

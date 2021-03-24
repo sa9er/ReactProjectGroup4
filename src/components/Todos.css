@@ -1,15 +1,29 @@
 .container {
     height: 1.5rem;
     width: 15rem;
-    border: thin solid rgb(50, 50, 65);
+    color: brown;
+    margin: auto;
 }
 
-button{
+.btn-done{
     width: 7.6rem;
+    color:rgb(51, 255, 0);
+}
+
+.btn-del{
+    width: 7.6rem;
+    color: red;
 }
 
 
+.item{
+   margin: 1rem auto;
+   border: thin solid rgb(50, 50, 65);
+   width: 15.3rem;
+   background-color:yellow;
+}
 .completed {
     text-decoration: line-through;
     opacity: 0.3;
+    color: green;
 }
