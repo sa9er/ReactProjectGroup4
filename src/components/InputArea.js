@@ -1,19 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 //import './InputArea.css';
 
-function InputArea({ addItem, updateInput, todo }) {
+function InputArea({ setTextInput, todos, setTodos, textInput }) {
+  
+const updateInput = (i) => {
+  setTextInput(i.target.value);
+}
+
+ const handleSubmit = (e) => {
+   e.preventDefault();
+   setTodos([
+    ...todos, 
+    {text: textInput, completed: false, id: Math.random() * 1000}
+   ]);
+   setTextInput('');
+   
+
+
+ }
+
+
   return (
-    <form className="todo-form" onSubmit={(e) => addItem(e, todo)}>
-      <label htmlFor="todo">Here:</label>
+    <form className="todo-form" >
+      <label>Here:</label>
       <input
         id="todo"
         name="todo"
         onChange={updateInput}
         required
         type="text"
-        value={todo}
+        value={textInput}
       />
-      <button type="submit">ADD TO</button>
+      <button onClick={handleSubmit} type="submit">ADD TO</button>
     </form>
   );
 }
