@@ -24,7 +24,7 @@ const Todo = ({text, i, todos, setTodos, }) => {
     }
     return (
         <div className="item" >
-            <div className={`container ${i.completed ? "completed" : ''}`} >{text} </div>
+            <div className={`container ${i.completed ? "completed" : ''}`} ><p>{text}</p> </div>
             <button className="btn-done" onClick={doneHandler} >done</button>
             <button className="btn-del" onClick={deleteHandler}>delete</button>
             
