@@ -7,10 +7,8 @@ function TodoList({ todos, setTodos }) {
         <>
 
         <div className="TodoList">
-
-          {todos.map((todo, index) => (
-            <Todos text={todo.text} key={index} />
-          <h1>Todo List</h1>
+        <h1>Todo List</h1>
+          
           {todos.map((i, index) => (
             <Todo 
             todos={todos} 
